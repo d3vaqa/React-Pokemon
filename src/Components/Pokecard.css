@@ -24,4 +24,9 @@
     background-color: #eceff1;
     border-radius: 5px;
     margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.Pokecard img:hover{
+    opacity: 1;
 }

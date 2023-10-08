@@ -4,12 +4,18 @@ import './Pokedex.css'
 
 
 const Pokedex = (props) => {
-    console.log(props)
+
+    let title = ''
+    if(props.isWinner){
+        title = <h1 className='Pokedex-winner'>Winning Hand</h1>
+    }else{
+        title = <h1 className='Pokedex-loser'>Losing Hand</h1>
+    }
   return (
     <div className='Pokedex'>
-        <h1>Pokedex</h1>
+        <h1 className="title">Pokedex</h1>
         <p>{props.exp}</p>
-        <p>  {props.isWinner ? "Winner" : "Loser"} </p>
+        {title}
         <div className='Pokedex-cards'>
             {props.pokemon.map((p) =>
                 <Pokecard 
